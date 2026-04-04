@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinyBigTalks | Insightful Blog on Finance, Tech, and more</title>
-    <meta name="description"
-        content="Stay updated with the latest in Finance, Tech, Lifestyle, and Sports at TinyBigTalks.">
+    <title>Contact Us | TinyBigTalks</title>
+    <meta name="description" content="Get in touch with TinyBigTalks - We'd love to hear from you.">
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -90,10 +92,68 @@
     </header>
 
     <main class="container">
-        <!-- Articles Loading Skeleton -->
-        <div id="articles-grid" class="articles-grid">
-            <!-- Populated by JS -->
-        </div>
+        <article class="page-content">
+            <h1>Contact Us</h1>
+            <p class="last-updated">We'd love to hear from you. Whether you have a question about content, tools, or just want to say hello, our team is ready to answer.</p>
+
+            <div class="contact-info-grid">
+                <div class="contact-card">
+                    <span class="icon">📧</span>
+                    <h3>Email Us</h3>
+                    <p>For inquiries and support:</p>
+                    <a href="mailto:contact@youtubemulti.online">contact@youtubemulti.online</a>
+                </div>
+                <div class="contact-card">
+                    <span class="icon">🤝</span>
+                    <h3>Social Media</h3>
+                    <p>Join our community for updates:</p>
+                    <div class="social-links-container" style="gap: 15px; margin-top: 5px;">
+                        <a href="#"><img src="assets/whatsapp.png" alt="WhatsApp" style="width: 24px; height: 24px;"></a>
+                        <a href="#"><img src="assets/telegram.png" alt="Telegram" style="width: 24px; height: 24px;"></a>
+                        <a href="#"><img src="assets/youtube.png" alt="YouTube" style="width: 24px; height: 24px;"></a>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <span class="icon">⏰</span>
+                    <h3>Response Time</h3>
+                    <p>We typically respond within</p>
+                    <p><strong>24-48 hours</strong></p>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="contact-form-section">
+                <h2 class="form-title">Send Us a Message</h2>
+                <form id="contact-form" onsubmit="event.preventDefault(); alert('Message sent! (Demo only)');">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" placeholder="How can we help?" required>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" class="form-input" placeholder="Write your message here..." required></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </article>
     </main>
 
     <footer>
