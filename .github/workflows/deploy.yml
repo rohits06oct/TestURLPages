@@ -1,8 +1,9 @@
-name: Deploy Release to GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
-  release:
-    types: [published]
+  push:
+    branches: ["main"]
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -10,7 +11,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages-release"
+  group: "pages"
   cancel-in-progress: false
 
 jobs:
