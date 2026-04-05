@@ -391,6 +391,14 @@ nav.desktop-nav ul li a.active::after {
   object-fit: cover;
 }
 
+.hero-img {
+  max-width: 75%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;
+  border-radius: 12px;
+}
+
 .article-content {
   padding: 15px;
   flex-grow: 1;
