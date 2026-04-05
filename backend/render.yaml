@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: tinybigtalks-backend
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DATABASE_URL
+        sync: false # Set this in the Render dashboard
+      - key: NODE_VERSION
+        value: 18
+      - key: PORT
+        value: 3000
