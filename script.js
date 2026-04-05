@@ -53,6 +53,11 @@ function renderArticles(articles) {
   const container = document.getElementById('articles-grid');
   if (!container) return;
 
+  if (articles.length === 0) {
+    container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 50px; color: var(--text-muted);">No articles found</div>';
+    return;
+  }
+
   container.innerHTML = articles.map(article => `
     <article class="article-card" onclick="window.open('${article.url}', '_blank')">
       <img src="${article.image}" alt="${article.title}" class="article-image">
@@ -74,8 +79,38 @@ function handleSearch(query) {
   renderArticles(filtered);
 }
 
+function filterByCategory(category) {
+  // Update Active State in UI
+  const navLinks = document.querySelectorAll('.desktop-nav a');
+  navLinks.forEach(link => {
+    if (link.textContent.trim().toLowerCase() === category.toLowerCase()) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
+  });
+
+  if (category.toLowerCase() === 'all' || category === '') {
+    renderArticles(ARTICLE_DATA);
+    return;
+  }
+
+  const filtered = ARTICLE_DATA.filter(article =>
+    article.category.toLowerCase() === category.toLowerCase()
+  );
+  renderArticles(filtered);
+}
+
 document.addEventListener('DOMContentLoaded', () => {
-  renderArticles(ARTICLE_DATA);
+  // Check for category in URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const categoryParam = urlParams.get('category');
+
+  if (categoryParam) {
+    filterByCategory(categoryParam);
+  } else {
+    renderArticles(ARTICLE_DATA);
+  }
 
   // Web Search
   const webSearchInput = document.getElementById('web-search');
@@ -118,3 +153,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
