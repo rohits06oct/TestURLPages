@@ -54,7 +54,11 @@ const memoryCache = new Map();
 const memoryRateLimit = new Map();
 const memoryDuplicates = new Map();
 
-app.use(cors());
+app.use(cors({
+    origin: ['https://tinybigtalks.online', 'http://localhost:5500', 'http://127.0.0.1:5500'], // Allow production and common local dev ports
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type']
+}));
 app.use(bodyParser.json());
 
 // Utility: Normalize and Hash

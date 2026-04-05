@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: tinybigtalks-backend
+    name: test-backend
     runtime: node
     plan: free
     buildCommand: npm install
@@ -10,5 +10,3 @@ services:
         sync: false # Set this in the Render dashboard
       - key: NODE_VERSION
         value: 18
-      - key: PORT
-        value: 3000

@@ -353,11 +353,12 @@
         </div>
     </div>
 
+    <script src="../config.js"></script>
     <script src="../translator.js"></script>
     <script src="../script.js"></script>
 <script>
         // Backend API configuration
-        const API_BASE_URL = 'http://localhost:3000/api/comments';
+        const API_BASE_URL = CONFIG.API_BASE_URL;
         const CURRENT_ARTICLE_ID = 'stock-market-trends'; // Unique ID for this article
 
         // Cookie Helpers
