@@ -264,7 +264,11 @@
         <div class="comments-section">
             <h3>Leave your thoughts</h3>
             <form id="comment-form" class="comment-form">
-                <textarea id="comment-content" rows="4" placeholder="Share your thoughts..." required></textarea>
+                <textarea id="comment-content" rows="4" placeholder="Share your thoughts..." required
+                    maxlength="700"></textarea>
+                <div id="comment-error"
+                    style="color: #ff4d4d; font-size: 14px; margin-top: -5px; margin-bottom: 5px; display: none; font-weight: 600;">
+                </div>
                 <button type="submit" class="submit-comment-btn" id="submit-btn">Post Comment</button>
             </form>
 
@@ -335,6 +339,96 @@
         const API_BASE_URL = 'http://localhost:3000/api/comments';
         const CURRENT_ARTICLE_ID = 'future-of-ai'; // Unique ID for this article
 
+        // Cookie Helpers
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/; SameSite=Lax";
+        }
+
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Tracking ID Management
+        function getPersistentId() {
+            let id = getCookie('tbt_user_id');
+            if (!id) {
+                id = 'cookie_' + Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+                setCookie('tbt_user_id', id, 365);
+            }
+            return id;
+        }
+
+        function getSessionId() {
+            let id = sessionStorage.getItem('tbt_session_id');
+            if (!id) {
+                id = 'session_' + Math.random().toString(36).substr(2, 9) + Date.now().toString(36);
+                sessionStorage.setItem('tbt_session_id', id);
+            }
+            return id;
+        }
+
+        // Metadata Collection
+        function getMetadata() {
+            const ua = navigator.userAgent;
+            const isMobile = /Mobile|Android|iPhone/i.test(ua);
+
+            return {
+                user_agent: ua,
+                browser_lang: navigator.language || 'unknown',
+                device_type: isMobile ? 'Mobile' : 'Desktop',
+                referrer: document.referrer || 'none',
+                page_url: window.location.href,
+                screen_res: `${window.screen.width}x${window.screen.height}`
+            };
+        }
+
+        // Comment Validation
+        function validateComment(text) {
+            const errorDiv = document.getElementById('comment-error');
+            const submitBtn = document.getElementById('submit-btn');
+            errorDiv.style.display = 'none';
+            errorDiv.textContent = '';
+            submitBtn.disabled = false;
+
+            if (!text) return true;
+
+            // 1. Profanity Filter
+            const bannedWords = ['sex', 'xxx', 'adult', 'fuck', 'Witch', 'you dog', 'motherfucker'];
+            const lowerText = text.toLowerCase();
+            for (const word of bannedWords) {
+                if (lowerText.includes(word)) {
+                    errorDiv.textContent = "You are using adult comments and not allowed to add";
+                    errorDiv.style.display = 'block';
+                    submitBtn.disabled = true;
+                    return false;
+                }
+            }
+
+            // 2. Character Filter (Alphanumeric + , . |)
+            const allowedRegex = /^[a-zA-Z0-9\s,\.\|]*$/;
+            if (!allowedRegex.test(text)) {
+                errorDiv.textContent = "Only letters, numbers, and symbols (, . |) are allowed.";
+                errorDiv.style.display = 'block';
+                submitBtn.disabled = true;
+                return false;
+            }
+
+            return true;
+        }
+
         // Real API call: Fetch Comments
         async function fetchComments() {
             try {
@@ -350,13 +444,15 @@
 
         // Real API call: Post Comment
         async function postComment(commentData) {
+            const meta = getMetadata();
             const payload = {
                 id_article: CURRENT_ARTICLE_ID,
                 comment: commentData.content,
-                user_ip: '127.0.0.1', // In a real app, the server detects this.
+                user_ip: '127.0.0.1', // Background: Server side detection preferred
                 user_city: 'any',
-                session_id: 'session_' + Math.random().toString(36).substr(2, 9),
-                cookie_id: 'cookie_' + Math.random().toString(36).substr(2, 9)
+                session_id: getSessionId(),
+                cookie_id: getPersistentId(),
+                ...meta
             };
 
             const response = await fetch(API_BASE_URL, {
@@ -367,7 +463,6 @@
 
             if (!response.ok) {
                 const err = await response.json();
-                // Pass the whole error object for specialized handling
                 throw new Error(JSON.stringify({
                     error: err.error || 'Failed to post',
                     remainingSeconds: err.remainingSeconds
@@ -434,6 +529,11 @@
             const submitBtn = document.getElementById('submit-btn');
             const contentInput = document.getElementById('comment-content');
 
+            // Client-side Validation
+            if (!validateComment(contentInput.value)) {
+                return;
+            }
+
             // Visual feedback
             submitBtn.disabled = true;
             submitBtn.textContent = 'Posting...';
@@ -453,9 +553,9 @@
                 }
             } catch (error) {
                 console.error("Failed to post comment:", error);
-                
+
                 let errorMsg = "Something went wrong. Please try again.";
-                
+
                 // Handle dynamic rate-limit if response is 429
                 try {
                     const errorData = JSON.parse(error.message);
@@ -473,6 +573,11 @@
                 submitBtn.disabled = false;
                 submitBtn.textContent = 'Post Comment';
             }
+        });
+
+        // Real-time validation on input
+        document.getElementById('comment-content').addEventListener('input', (e) => {
+            validateComment(e.target.value);
         });
 
         // Start the engine

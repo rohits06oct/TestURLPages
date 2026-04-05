@@ -70,7 +70,13 @@ const initializeCsv = async () => {
                 { id: 'user_ip', title: 'user_ip' },
                 { id: 'user_city', title: 'user_city' },
                 { id: 'session_id', title: 'session_id' },
-                { id: 'cookie_id', title: 'cookie_id' }
+                { id: 'cookie_id', title: 'cookie_id' },
+                { id: 'user_agent', title: 'user_agent' },
+                { id: 'browser_lang', title: 'browser_lang' },
+                { id: 'device_type', title: 'device_type' },
+                { id: 'referrer', title: 'referrer' },
+                { id: 'page_url', title: 'page_url' },
+                { id: 'screen_res', title: 'screen_res' }
             ]
         });
         await csvWriter.writeRecords([]);
@@ -86,7 +92,10 @@ const generateHash = (text) => crypto.createHash('sha256').update(text).digest('
 
 // POST: Add Comment
 app.post('/api/comments', async (req, res) => {
-    const { id_article, comment, user_ip, session_id, user_city, cookie_id } = req.body;
+    const { 
+        id_article, comment, user_ip, session_id, user_city, cookie_id,
+        user_agent, browser_lang, device_type, referrer, page_url, screen_res 
+    } = req.body;
     
     if (!id_article || !comment || !user_ip) {
         return res.status(400).json({ error: 'Missing required fields' });
@@ -144,7 +153,13 @@ app.post('/api/comments', async (req, res) => {
             user_ip,
             user_city: user_city || 'any',
             session_id,
-            cookie_id
+            cookie_id,
+            user_agent: user_agent || 'unknown',
+            browser_lang: browser_lang || 'unknown',
+            device_type: device_type || 'unknown',
+            referrer: referrer || 'none',
+            page_url: page_url || 'unknown',
+            screen_res: screen_res || 'unknown'
         };
 
         // Write to CSV
