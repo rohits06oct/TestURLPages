@@ -1,4 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
+(function () {
+    // Add preconnect for faster loading
+    if (!document.querySelector('link[href*="translate.googleapis.com"]')) {
+        const pc1 = document.createElement('link');
+        pc1.rel = 'preconnect';
+        pc1.href = 'https://translate.googleapis.com';
+        document.head.appendChild(pc1);
+
+        const pc2 = document.createElement('link');
+        pc2.rel = 'preconnect';
+        pc2.href = 'https://translate.google.com';
+        document.head.appendChild(pc2);
+    }
+
     injectTranslator();
 
     function injectTranslator() {
@@ -6,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const translateContainer = document.createElement('div');
         translateContainer.id = 'google_translate_container';
-        translateContainer.style.cssText = 'text-align: right; padding: 10px 20px; background: var(--card-bg, #ffffff); border: 1px solid var(--border-color, #eeeeee); margin-bottom: 30px; border-radius: 12px; display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);';
+        translateContainer.style.cssText = 'text-align: right; padding: 10px 20px; background: var(--card-bg, #ffffff); border: 1px solid var(--border-color, #eeeeee); margin-bottom: 30px; border-radius: 12px; display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 10px; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); min-height: 40px;';
 
         const translateDiv = document.createElement('div');
         translateDiv.id = 'google_translate_element';
@@ -33,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
             mainContainer.prepend(translateContainer);
         } else if (header) {
             header.after(translateContainer);
-            // If it's outside a main container, apply the container class for alignment
             translateContainer.classList.add('container');
         } else {
             document.body.prepend(translateContainer);
@@ -50,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const script = document.createElement('script');
         script.type = 'text/javascript';
         script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.async = true; // Load asynchronously for performance
         document.body.appendChild(script);
     }
-});
+})();

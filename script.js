@@ -160,7 +160,7 @@ function renderArticles(articles, containerId = 'search-grid') {
 
   container.innerHTML = articles.map(article => `
     <article class="article-card" onclick="window.location.href='${article.url}'">
-      <img src="${article.image}" alt="${article.title}" class="article-image">
+      <img src="${article.image}" alt="${article.title}" class="article-image" loading="lazy" decoding="async">
       <div class="article-content">
         <h2 class="article-title">${article.title}</h2>
         <p class="article-excerpt">${article.excerpt}</p>
@@ -176,7 +176,7 @@ function renderVerticalArticles(articles, containerId = 'articles-feed') {
 
   container.innerHTML = articles.map(article => `
     <article class="article-card-vertical" onclick="window.location.href='${article.url}'">
-      <img src="${article.image}" alt="${article.title}" class="article-image">
+      <img src="${article.image}" alt="${article.title}" class="article-image" loading="lazy" decoding="async">
       <div class="article-content">
         <h2 class="article-title" style="font-size: 24px; margin-bottom: 15px;">${article.title}</h2>
         <p class="article-excerpt" style="-webkit-line-clamp: 4; line-clamp: 4; font-size: 15px; margin-bottom: 20px;">${article.excerpt}</p>
