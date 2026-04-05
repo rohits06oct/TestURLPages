@@ -1,56 +1,156 @@
 const ARTICLE_DATA = [
+  // TinyBigTalks (11 Real Articles)
   {
-    id: 1,
-    title: 'Stock Market Trends to Watch',
-    excerpt: 'Stay updated with the latest movements in the stock market and key factors driving ....',
+    id: 'tbt-1',
+    title: 'Future of AI in Everyday Life',
+    excerpt: 'Artificial Intelligence is no longer just a buzzword; it\'s a transformative force reshaping how we live...',
     image: 'assets/blog-default.png',
-    category: 'Finance',
+    category: 'TinyBigTalks',
+    url: 'articles/future-of-ai.html'
+  },
+  {
+    id: 'tbt-2',
+    title: 'Sustainable Living in 2024',
+    excerpt: 'Living sustainably doesn\'t always mean massive changes to your lifestyle. Often, it\'s the small choices...',
+    image: 'assets/blog-default.png',
+    category: 'TinyBigTalks',
+    url: 'articles/sustainable-living.html'
+  },
+  {
+    id: 'tbt-3',
+    title: 'Personal Finance Tips for 2024',
+    excerpt: 'Financial freedom begins with smart choices and disciplined habits. Navigating the economy requires strategy...',
+    image: 'assets/blog-default.png',
+    category: 'TinyBigTalks',
+    url: 'articles/personal-finance-tips.html'
+  },
+  {
+    id: 'tbt-4',
+    title: 'Mental Health Awareness',
+    excerpt: 'In a world of constant connectivity, prioritizing our emotional well-being is more important than ever...',
+    image: 'assets/blog-default.png',
+    category: 'TinyBigTalks',
+    url: 'articles/mental-health-awareness.html'
+  },
+  {
+    id: 'tbt-5',
+    title: 'Top Travel Hacks for 2024',
+    excerpt: 'Ready for your next adventure? Traveling more affordably and efficiently is all about knowing the hacks...',
+    image: 'assets/blog-default.png',
+    category: 'TinyBigTalks',
+    url: 'articles/travel-hacks-2024.html'
+  },
+  {
+    id: 'tbt-6',
+    title: 'Stock Market Trends to Watch',
+    excerpt: 'Stay updated with the latest movements in the stock market and key factors driving the economy...',
+    image: 'assets/blog-default.png',
+    category: 'TinyBigTalks',
     url: 'articles/stock-market-trends.html'
   },
   {
-    id: 2,
+    id: 'tbt-7',
     title: 'Latest Gadgets of 2024',
     excerpt: 'Discover the most exciting tech gadgets of 2024 that are shaping the future of technology...',
     image: 'assets/blog-default.png',
-    category: 'Tech',
+    category: 'TinyBigTalks',
     url: 'articles/latest-gadgets.html'
   },
   {
-    id: 3,
+    id: 'tbt-8',
     title: '5 Tips for Work-Life Balance',
     excerpt: 'Learn effective strategies to balance your work and personal life for a healthier lifestyle...',
     image: 'assets/blog-default.png',
-    category: 'EOD Lifestyle',
+    category: 'TinyBigTalks',
     url: 'articles/work-life-balance.html'
   },
   {
-    id: 4,
+    id: 'tbt-9',
     title: 'IPL 2024: Season Highlights',
     excerpt: 'Catch up on the most thrilling moments and highlights from the IPL 2024 season...',
     image: 'assets/blog-default.png',
-    category: 'Cricket',
+    category: 'TinyBigTalks',
     url: 'articles/ipl-2024.html'
   },
   {
-    id: 5,
+    id: 'tbt-10',
     title: 'Formula 1: Race Day Insights',
     excerpt: 'Get an inside look at the latest Formula 1 races and behind-the-scenes action...',
     image: 'assets/blog-default.png',
-    category: 'Race',
+    category: 'TinyBigTalks',
     url: 'articles/f1-insights.html'
   },
   {
-    id: 6,
+    id: 'tbt-11',
     title: 'Top Golf Destinations to Visit',
     excerpt: 'Explore the best golf courses around the world for your next vacation...',
     image: 'assets/blog-default.png',
-    category: 'Golf',
+    category: 'TinyBigTalks',
     url: 'articles/top-golf-destinations.html'
-  }
+  },
+  // Other categories (restoring previous counts)
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: `fin-${i + 1}`,
+    title: `Finance Strategy ${i + 1}`,
+    excerpt: 'Mastering your wealth and understanding market trends is crucial for long-term success...',
+    image: 'assets/blog-default.png',
+    category: 'Finance',
+    url: 'articles/finance-strategy.html'
+  })),
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: `tech-${i + 1}`,
+    title: `Future Tech ${i + 1}`,
+    excerpt: 'The digital landscape is evolving rapidly. we explore what matters...',
+    image: 'assets/blog-default.png',
+    category: 'Tech',
+    url: 'articles/future-tech.html'
+  })),
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: `life-${i + 1}`,
+    title: `Balanced Life ${i + 1}`,
+    excerpt: 'Finding the right balance between work, health, and personal growth...',
+    image: 'assets/blog-default.png',
+    category: 'EOD Lifestyle',
+    url: 'articles/balanced-life.html'
+  })),
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: `cric-${i + 1}`,
+    title: `Cricket Highlights ${i + 1}`,
+    excerpt: 'Latest updates from the world of cricket, match analysis, and performances...',
+    image: 'assets/blog-default.png',
+    category: 'Cricket',
+    url: 'articles/cricket-highlights.html'
+  })),
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: `foot-${i + 1}`,
+    title: `Football World ${i + 1}`,
+    excerpt: 'The beautiful game continues to surprise. Tactical breakdowns and summaries...',
+    image: 'assets/blog-default.png',
+    category: 'Football',
+    url: 'articles/football-world.html'
+  })),
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: `race-${i + 1}`,
+    title: `Racing Series ${i + 1}`,
+    excerpt: 'High speed and precision on the track. latest from international racing...',
+    image: 'assets/blog-default.png',
+    category: 'Race',
+    url: 'articles/racing-series.html'
+  })),
+  ...Array.from({ length: 5 }, (_, i) => ({
+    id: `golf-${i + 1}`,
+    title: `Golf Greens ${i + 1}`,
+    excerpt: 'Exploring the most beautiful golf courses and the players who dominate them...',
+    image: 'assets/blog-default.png',
+    category: 'Golf',
+    url: 'articles/golf-greens.html'
+  }))
 ];
 
-function renderArticles(articles) {
-  const container = document.getElementById('articles-grid');
+
+
+function renderArticles(articles, containerId = 'search-grid') {
+  const container = document.getElementById(containerId);
   if (!container) return;
 
   if (articles.length === 0) {
@@ -59,7 +159,7 @@ function renderArticles(articles) {
   }
 
   container.innerHTML = articles.map(article => `
-    <article class="article-card" onclick="window.open('${article.url}', '_blank')">
+    <article class="article-card" onclick="window.location.href='${article.url}'">
       <img src="${article.image}" alt="${article.title}" class="article-image">
       <div class="article-content">
         <h2 class="article-title">${article.title}</h2>
@@ -70,47 +170,112 @@ function renderArticles(articles) {
   `).join('');
 }
 
+function renderVerticalArticles(articles, containerId = 'articles-feed') {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  container.innerHTML = articles.map(article => `
+    <article class="article-card-vertical" onclick="window.location.href='${article.url}'">
+      <img src="${article.image}" alt="${article.title}" class="article-image">
+      <div class="article-content">
+        <h2 class="article-title" style="font-size: 24px; margin-bottom: 15px;">${article.title}</h2>
+        <p class="article-excerpt" style="-webkit-line-clamp: 4; line-clamp: 4; font-size: 15px; margin-bottom: 20px;">${article.excerpt}</p>
+        <span class="read-more" style="font-size: 14px;">[Read more]</span>
+      </div>
+    </article>
+  `).join('');
+}
+
+function renderHomeSections() {
+  // Clear any search states
+  const searchSection = document.getElementById('search-results-section');
+  const feedSection = document.getElementById('articles-feed-section');
+  const sections = document.querySelectorAll('.category-section');
+  if (searchSection) searchSection.style.display = 'none';
+  if (feedSection) feedSection.style.display = 'block';
+  sections.forEach(s => s.style.display = 'block');
+
+  // Populate sections by ID
+  const map = {
+    'tbt-grid': { cat: 'TinyBigTalks', limit: 12 },
+    'finance-grid': { cat: 'Finance', limit: 5 },
+    'tech-grid': { cat: 'Tech', limit: 5 },
+    'lifestyle-grid': { cat: 'EOD Lifestyle', limit: 5 },
+    'cricket-grid': { cat: 'Cricket', limit: 5 },
+    'football-grid': { cat: 'Football', limit: 5 },
+    'race-grid': { cat: 'Race', limit: 5 },
+    'golf-grid': { cat: 'Golf', limit: 5 }
+  };
+
+  for (const [id, config] of Object.entries(map)) {
+    const articles = ARTICLE_DATA.filter(a => a.category === config.cat).slice(0, config.limit);
+    renderArticles(articles, id);
+  }
+}
+
 function handleSearch(query) {
+  const sections = document.querySelectorAll('.category-section');
+  const searchSection = document.getElementById('search-results-section');
+  const feedSection = document.getElementById('articles-feed-section');
+  
+  if (!query || query.trim() === '') {
+    if (searchSection) searchSection.style.display = 'none';
+    if (feedSection) feedSection.style.display = 'block';
+    sections.forEach(s => s.style.display = 'block');
+    return;
+  }
+
+  sections.forEach(s => s.style.display = 'none');
+  if (feedSection) feedSection.style.display = 'none';
+  if (searchSection) searchSection.style.display = 'block';
+
   const filtered = ARTICLE_DATA.filter(article =>
     article.title.toLowerCase().includes(query.toLowerCase()) ||
     article.excerpt.toLowerCase().includes(query.toLowerCase()) ||
     article.category.toLowerCase().includes(query.toLowerCase())
   );
-  renderArticles(filtered);
+  renderArticles(filtered, 'search-grid');
 }
 
 function filterByCategory(category) {
-  // Update Active State in UI
-  const navLinks = document.querySelectorAll('.desktop-nav a');
-  navLinks.forEach(link => {
-    if (link.textContent.trim().toLowerCase() === category.toLowerCase()) {
-      link.classList.add('active');
-    } else {
-      link.classList.remove('active');
-    }
-  });
-
+  const searchSection = document.getElementById('search-results-section');
+  const feedSection = document.getElementById('articles-feed-section');
+  const sections = document.querySelectorAll('.category-section');
+  
   if (category.toLowerCase() === 'all' || category === '') {
-    renderArticles(ARTICLE_DATA);
+    renderHomeSections();
     return;
   }
+
+  sections.forEach(s => s.style.display = 'none');
+  if (feedSection) feedSection.style.display = 'none';
+  if (searchSection) searchSection.style.display = 'block';
 
   const filtered = ARTICLE_DATA.filter(article =>
     article.category.toLowerCase() === category.toLowerCase()
   );
-  renderArticles(filtered);
+  renderArticles(filtered, 'search-grid');
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  // Check for category in URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const categoryParam = urlParams.get('category');
+  const path = window.location.pathname;
+  const isArticlesPage = path.includes('articles.html');
 
-  if (categoryParam) {
-    filterByCategory(categoryParam);
+  if (isArticlesPage) {
+    const tbtArticles = ARTICLE_DATA.filter(a => a.category === 'TinyBigTalks');
+    renderVerticalArticles(tbtArticles, 'articles-feed');
   } else {
-    renderArticles(ARTICLE_DATA);
+    // Check for category in URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get('category');
+
+    if (categoryParam) {
+      filterByCategory(categoryParam);
+    } else {
+      renderHomeSections();
+    }
   }
+
 
   // Web Search
   const webSearchInput = document.getElementById('web-search');

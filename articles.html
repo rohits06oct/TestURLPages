@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TinyBigTalks | Insightful Blog on Finance, Tech, and more</title>
-    <meta name="description"
-        content="Stay updated with the latest in Finance, Tech, Lifestyle, and Sports at TinyBigTalks.">
+    <title>TinyBigTalks | All Articles</title>
+    <meta name="description" content="Explore all TinyBigTalks articles.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -77,111 +76,20 @@
             <!-- Main Nav -->
             <nav class="desktop-nav">
                 <ul>
-                    <li><a href="#">Finance</a></li>
-                    <li><a href="#">Tech</a></li>
-                    <li><a href="#">EOD Lifestyle</a></li>
-                    <li><a href="#">Cricket</a></li>
-                    <li><a href="#">Football</a></li>
-                    <li><a href="#">Race</a></li>
-                    <li><a href="#">Golf</a></li>
+                    <li><a href="index.html?category=Finance">Finance</a></li>
+                    <li><a href="index.html?category=Tech">Tech</a></li>
+                    <li><a href="index.html?category=EOD Lifestyle">EOD Lifestyle</a></li>
+                    <li><a href="index.html?category=Cricket">Cricket</a></li>
+                    <li><a href="index.html?category=Football">Football</a></li>
+                    <li><a href="index.html?category=Race">Race</a></li>
+                    <li><a href="index.html?category=Golf">Golf</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <!-- TinyBigTalks Section -->
-        <section class="category-section">
-            <div class="category-header">
-                <span class="category-label">TinyBigTalks</span>
-                <div class="category-line"></div>
-            </div>
-            <div id="tbt-grid" class="articles-grid grid-4-cols">
-                <!-- Populated by JS -->
-            </div>
-            <div class="read-all-container">
-                <a href="articles.html" class="read-all-btn">Read all articles</a>
-            </div>
-        </section>
-
-        <!-- Finance Section -->
-        <section class="category-section">
-            <div class="category-header">
-                <span class="category-label">Finance</span>
-                <div class="category-line"></div>
-            </div>
-            <div id="finance-grid" class="articles-grid grid-5-cols">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- Tech Section -->
-        <section class="category-section">
-            <div class="category-header">
-                <span class="category-label">Tech</span>
-                <div class="category-line"></div>
-            </div>
-            <div id="tech-grid" class="articles-grid grid-5-cols">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- EOD LifeStyle Section -->
-        <section class="category-section">
-            <div class="category-header">
-                <span class="category-label">EOD LifeStyle</span>
-                <div class="category-line"></div>
-            </div>
-            <div id="lifestyle-grid" class="articles-grid grid-5-cols">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- Cricket Section -->
-        <section class="category-section">
-            <div class="category-header">
-                <span class="category-label">Cricket</span>
-                <div class="category-line"></div>
-            </div>
-            <div id="cricket-grid" class="articles-grid grid-5-cols">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- Football Section -->
-        <section class="category-section">
-            <div class="category-header">
-                <span class="category-label">Football</span>
-                <div class="category-line"></div>
-            </div>
-            <div id="football-grid" class="articles-grid grid-5-cols">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- Race Section -->
-        <section class="category-section">
-            <div class="category-header">
-                <span class="category-label">Race</span>
-                <div class="category-line"></div>
-            </div>
-            <div id="race-grid" class="articles-grid grid-5-cols">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- Golf Section -->
-        <section class="category-section">
-            <div class="category-header">
-                <span class="category-label">Golf</span>
-                <div class="category-line"></div>
-            </div>
-            <div id="golf-grid" class="articles-grid grid-5-cols">
-                <!-- Populated by JS -->
-            </div>
-        </section>
-
-        <!-- Search Results Grid (Hidden by default, shown during search) -->
+        <!-- Search Results Grid (Initially Hidden) -->
         <div id="search-results-section" style="display: none;">
             <div class="category-header">
                 <span class="category-label">Search Results</span>
@@ -189,19 +97,29 @@
             </div>
             <div id="search-grid" class="articles-grid grid-4-cols"></div>
         </div>
-    </main>
 
+        <div id="articles-feed-section">
+            <div class="category-header" style="margin-top: 40px;">
+                <span class="category-label">All Articles</span>
+                <div class="category-line"></div>
+            </div>
+
+            <div id="articles-feed" class="articles-vertical-feed">
+                <!-- Populated by JS -->
+            </div>
+        </div>
+    </main>
 
     <footer>
         <div class="container">
             <nav class="footer-nav">
-                <a href="#">Finance</a>
-                <a href="#">Tech</a>
-                <a href="#">EOD Lifestyle</a>
-                <a href="#">Cricket</a>
-                <a href="#">Football</a>
-                <a href="#">Race</a>
-                <a href="#">Golf</a>
+                <a href="index.html?category=Finance">Finance</a>
+                <a href="index.html?category=Tech">Tech</a>
+                <a href="index.html?category=EOD Lifestyle">EOD Lifestyle</a>
+                <a href="index.html?category=Cricket">Cricket</a>
+                <a href="index.html?category=Football">Football</a>
+                <a href="index.html?category=Race">Race</a>
+                <a href="index.html?category=Golf">Golf</a>
             </nav>
 
             <div class="footer-links">
@@ -241,11 +159,12 @@
         </div>
         <input type="text" id="mobile-search-input" class="mobile-search-input" placeholder="Search the blog...">
         <div id="mobile-search-results" style="margin-top: 20px;">
-            <!-- Results show up in the main grid, but we could add separate logic here -->
+            <!-- Results show up in the main grid -->
         </div>
     </div>
 
     <script src="script.js"></script>
+
 </body>
 
 </html>
