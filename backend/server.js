@@ -208,7 +208,7 @@ app.get('/api/comments/:id_article', async (req, res) => {
             .pipe(csvParser())
             .on('data', (row) => {
                 if (row.id_article === id_article && row.status === 'approved') {
-                    comments.push({
+                    comments.unshift({ // Add to beginning for Newest-First sorting
                         comment: row.comment,
                         created_at: parseInt(row.created_at),
                         status: row.status
