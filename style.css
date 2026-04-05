@@ -64,18 +64,23 @@ header {
 }
 
 .logo {
-  font-size: 32px;
-  font-weight: 800;
   display: flex;
   align-items: center;
+  height: 65px;
+  /* Enhanced height for better visibility */
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.logo span.cyan {
-  color: var(--primary);
+.logo:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
-.logo span.navy {
-  color: var(--secondary);
+.logo img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
 .mobile-icons {
@@ -533,7 +538,9 @@ footer {
   }
 
   .logo {
-    font-size: 24px;
+    height: 50px;
+    /* Better visibility on mobile */
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
   .articles-grid {
