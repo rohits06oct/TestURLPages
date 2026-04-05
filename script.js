@@ -197,7 +197,7 @@ function renderHomeSections() {
 
   // Populate sections by ID
   const map = {
-    'tbt-grid': { cat: 'TinyBigTalks', limit: 12 },
+    'tbt-grid': { cat: 'TinyBigTalks', limit: 8 },
     'finance-grid': { cat: 'Finance', limit: 5 },
     'tech-grid': { cat: 'Tech', limit: 5 },
     'lifestyle-grid': { cat: 'EOD Lifestyle', limit: 5 },
