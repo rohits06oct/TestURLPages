@@ -16,78 +16,6 @@ const ARTICLE_DATA = [
     category: 'TinyBigTalks',
     url: 'articles/sustainable-living.html'
   },
-  {
-    id: 'tbt-3',
-    title: 'Personal Finance Tips for 2024',
-    excerpt: 'Financial freedom begins with smart choices and disciplined habits. Navigating the economy requires strategy...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/personal-finance-tips.html'
-  },
-  {
-    id: 'tbt-4',
-    title: 'Mental Health Awareness',
-    excerpt: 'In a world of constant connectivity, prioritizing our emotional well-being is more important than ever...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/mental-health-awareness.html'
-  },
-  {
-    id: 'tbt-5',
-    title: 'Top Travel Hacks for 2024',
-    excerpt: 'Ready for your next adventure? Traveling more affordably and efficiently is all about knowing the hacks...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/travel-hacks-2024.html'
-  },
-  {
-    id: 'tbt-6',
-    title: 'Stock Market Trends to Watch',
-    excerpt: 'Stay updated with the latest movements in the stock market and key factors driving the economy...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/stock-market-trends.html'
-  },
-  {
-    id: 'tbt-7',
-    title: 'Latest Gadgets of 2024',
-    excerpt: 'Discover the most exciting tech gadgets of 2024 that are shaping the future of technology...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/latest-gadgets.html'
-  },
-  {
-    id: 'tbt-8',
-    title: '5 Tips for Work-Life Balance',
-    excerpt: 'Learn effective strategies to balance your work and personal life for a healthier lifestyle...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/work-life-balance.html'
-  },
-  {
-    id: 'tbt-9',
-    title: 'IPL 2024: Season Highlights',
-    excerpt: 'Catch up on the most thrilling moments and highlights from the IPL 2024 season...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/ipl-2024.html'
-  },
-  {
-    id: 'tbt-10',
-    title: 'Formula 1: Race Day Insights',
-    excerpt: 'Get an inside look at the latest Formula 1 races and behind-the-scenes action...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/f1-insights.html'
-  },
-  {
-    id: 'tbt-11',
-    title: 'Top Golf Destinations to Visit',
-    excerpt: 'Explore the best golf courses around the world for your next vacation...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/top-golf-destinations.html'
-  },
   // Other categories (restoring previous counts)
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `fin-${i + 1}`,
@@ -217,7 +145,7 @@ function handleSearch(query) {
   const sections = document.querySelectorAll('.category-section');
   const searchSection = document.getElementById('search-results-section');
   const feedSection = document.getElementById('articles-feed-section');
-  
+
   if (!query || query.trim() === '') {
     if (searchSection) searchSection.style.display = 'none';
     if (feedSection) feedSection.style.display = 'block';
@@ -241,7 +169,7 @@ function filterByCategory(category) {
   const searchSection = document.getElementById('search-results-section');
   const feedSection = document.getElementById('articles-feed-section');
   const sections = document.querySelectorAll('.category-section');
-  
+
   if (category.toLowerCase() === 'all' || category === '') {
     renderHomeSections();
     return;
