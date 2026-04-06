@@ -92,7 +92,7 @@ const ARTICLE_DATA = [
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `fin-${i + 1}`,
     title: `Finance Strategy ${i + 1}`,
-    excerpt: 'Mastering your wealth and understanding market trends is crucial for long-term success...',
+    excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Finance',
     url: 'articles/finance-strategy.html'
@@ -100,7 +100,7 @@ const ARTICLE_DATA = [
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `tech-${i + 1}`,
     title: `Future Tech ${i + 1}`,
-    excerpt: 'The digital landscape is evolving rapidly. we explore what matters...',
+    excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Tech',
     url: 'articles/future-tech.html'
@@ -108,7 +108,7 @@ const ARTICLE_DATA = [
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `life-${i + 1}`,
     title: `Balanced Life ${i + 1}`,
-    excerpt: 'Finding the right balance between work, health, and personal growth...',
+    excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'EOD Lifestyle',
     url: 'articles/balanced-life.html'
@@ -116,7 +116,7 @@ const ARTICLE_DATA = [
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `cric-${i + 1}`,
     title: `Cricket Highlights ${i + 1}`,
-    excerpt: 'Latest updates from the world of cricket, match analysis, and performances...',
+    excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Cricket',
     url: 'articles/cricket-highlights.html'
@@ -124,7 +124,7 @@ const ARTICLE_DATA = [
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `foot-${i + 1}`,
     title: `Football World ${i + 1}`,
-    excerpt: 'The beautiful game continues to surprise. Tactical breakdowns and summaries...',
+    excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Football',
     url: 'articles/football-world.html'
@@ -132,7 +132,7 @@ const ARTICLE_DATA = [
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `race-${i + 1}`,
     title: `Racing Series ${i + 1}`,
-    excerpt: 'High speed and precision on the track. latest from international racing...',
+    excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Race',
     url: 'articles/racing-series.html'
@@ -140,7 +140,7 @@ const ARTICLE_DATA = [
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `golf-${i + 1}`,
     title: `Golf Greens ${i + 1}`,
-    excerpt: 'Exploring the most beautiful golf courses and the players who dominate them...',
+    excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Golf',
     url: 'articles/golf-greens.html'
