@@ -23,7 +23,7 @@ const ARTICLE_DATA = [
     excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Finance',
-    url: 'articles/finance-strategy.html'
+    url: 'https://www.financereport.online/'
   })),
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `tech-${i + 1}`,
@@ -31,7 +31,7 @@ const ARTICLE_DATA = [
     excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Tech',
-    url: 'articles/future-tech.html'
+    url: 'https://www.techreport.online/'
   })),
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `life-${i + 1}`,
@@ -39,7 +39,7 @@ const ARTICLE_DATA = [
     excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'EOD Lifestyle',
-    url: 'articles/balanced-life.html'
+    url: 'https://www.eodreport.online/'
   })),
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `cric-${i + 1}`,
@@ -47,7 +47,7 @@ const ARTICLE_DATA = [
     excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Cricket',
-    url: 'articles/cricket-highlights.html'
+    url: 'https://www.cricketreport.online/'
   })),
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `foot-${i + 1}`,
@@ -55,7 +55,7 @@ const ARTICLE_DATA = [
     excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Football',
-    url: 'articles/football-world.html'
+    url: 'https://www.footballreport.online/'
   })),
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `race-${i + 1}`,
@@ -63,7 +63,7 @@ const ARTICLE_DATA = [
     excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Race',
-    url: 'articles/racing-series.html'
+    url: 'https://www.racenews.online/'
   })),
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `golf-${i + 1}`,
@@ -71,7 +71,7 @@ const ARTICLE_DATA = [
     excerpt: 'Coming soon...',
     image: 'assets/blog-default.png',
     category: 'Golf',
-    url: 'articles/golf-greens.html'
+    url: 'https://www.golfreport.online/'
   }))
 ];
 
