@@ -2,6 +2,14 @@ const ARTICLE_DATA = [
   // TinyBigTalks (11 Real Articles)
   {
     id: 'tbt-1',
+    title: 'Euphoria Season 3 Premiere: Date & How to Watch',
+    excerpt: "Get the 'Euphoria' Season 3 premiere details, release date, and full episode schedule. Learn how to watch Zendaya return to HBO Max in April 2026....",
+    image: 'articles/image/euphoria-season-3.webp',
+    category: 'TinyBigTalks',
+    url: 'articles/euphoria-season-3-premiere-how-to-watch.html'
+  },
+  {
+    id: 'tbt-2',
     title: 'Iran vs USA and Israel – Best Strategic Analysis Guide with Examples (2026)',
     excerpt: "Learn how Iran's military strategy, asymmetric warfare, proxy networks, and missile power could challenge USA and Israel..",
     image: 'assets/blog-default.png',
