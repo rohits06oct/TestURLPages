@@ -7,7 +7,7 @@
   --bg-color: #f8f9fa;
   --card-bg: #ffffff;
   --text-main: #333333;
-  --text-muted: #666666;
+  --text-muted: #555555;
   --border-color: #eeeeee;
   --accent: #e74c3c;
   --transition: all 0.3s ease;
@@ -128,7 +128,10 @@ header {
   color: var(--text-muted);
   display: flex;
   align-items: center;
-  padding: 0;
+  padding: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  justify-content: center;
 }
 
 /* Social Banner Section */

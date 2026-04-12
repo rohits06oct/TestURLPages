@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TinyBigTalks | Insightful Blog on Finance, Tech, and more</title>
     <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="preload" as="image" href="assets/logo.png">
     <meta name="description"
         content="Stay updated with the latest in Finance, Tech, Lifestyle, and Sports at TinyBigTalks.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,12 +42,12 @@
 
                 <!-- Logo -->
                 <a href="https://tinybigtalks.online/index.html" class="logo"><img src="assets/logo.png"
-                        alt="TinyBigTalks Logo"></a>
+                        alt="TinyBigTalks Logo" width="180" height="65"></a>
 
                 <!-- Web Search -->
                 <div class="search-container-web">
                     <input type="text" id="web-search" placeholder="Search articles...">
-                    <button class="search-icon-btn">
+                    <button class="search-icon-btn" aria-label="Submit Search">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
@@ -63,15 +64,15 @@
                 <div class="social-links-container">
                     <a href="https://whatsapp.com/channel/0029Vb7T2SGK5cD7hKHjmn3N" target="_blank"
                         rel="noopener noreferrer" title="Join us on WhatsApp">
-                        <img src="assets/whatsapp.png" alt="WhatsApp">
+                        <img src="assets/whatsapp.png" alt="WhatsApp" width="28" height="28">
                     </a>
                     <a href="https://t.me/tinybigtalks" target="_blank" rel="noopener noreferrer"
                         title="Join us on Telegram">
-                        <img src="assets/telegram.png" alt="Telegram">
+                        <img src="assets/telegram.png" alt="Telegram" width="28" height="28">
                     </a>
                     <a href="https://www.youtube.com/@tinybigtalksblog" target="_blank" rel="noopener noreferrer"
                         title="Join us on YouTube">
-                        <img src="assets/youtube.png" alt="YouTube">
+                        <img src="assets/youtube.png" alt="YouTube" width="28" height="28">
                     </a>
                 </div>
             </div>
@@ -247,8 +248,8 @@
         </div>
     </div>
 
-    <script src="translator.js"></script>
-    <script src="script.js"></script>
+    <script src="translator.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

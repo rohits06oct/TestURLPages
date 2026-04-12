@@ -4,6 +4,8 @@
 <head>
     <link rel="preconnect" href="https://translate.googleapis.com">
     <link rel="preconnect" href="https://translate.google.com">
+    <link rel="preload" as="image" href="../assets/logo.png">
+    <link rel="preload" as="image" href="../assets/blog-default.png" fetchpriority="high">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iran vs USA and Israel – Best Strategic Analysis Guide with Examples (2026)</title>
@@ -196,12 +198,12 @@
                 </div>
 
                 <!-- Logo -->
-                <a href="../index.html" class="logo"><img src="../assets/logo.png" alt="TinyBigTalks Logo"></a>
+                <a href="../index.html" class="logo"><img src="../assets/logo.png" alt="TinyBigTalks Logo" width="180" height="65"></a>
 
                 <!-- Web Search -->
                 <div class="search-container-web">
                     <input type="text" id="web-search" placeholder="Search articles...">
-                    <button class="search-icon-btn">
+                    <button class="search-icon-btn" aria-label="Submit Search">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <circle cx="11" cy="11" r="8"></circle>
@@ -217,16 +219,16 @@
                 </p>
                 <div class="social-links-container">
                     <a href="#" target="_blank" rel="noopener noreferrer" title="Join us on WhatsApp">
-                        <img src="../assets/whatsapp.png" alt="WhatsApp">
+                        <img src="../assets/whatsapp.png" alt="WhatsApp" width="28" height="28">
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer" title="Join us on Youtube">
-                        <img src="../assets/youtube.png" alt="Youtube">
+                        <img src="../assets/youtube.png" alt="Youtube" width="28" height="28">
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer" title="Join us on Telegram">
-                        <img src="../assets/telegram.png" alt="Telegram">
+                        <img src="../assets/telegram.png" alt="Telegram" width="28" height="28">
                     </a>
                     <a href="#" target="_blank" rel="noopener noreferrer" title="Join us on YouTube">
-                        <img src="../assets/youtube.png" alt="YouTube">
+                        <img src="../assets/youtube.png" alt="YouTube" width="28" height="28">
                     </a>
                 </div>
             </div>
@@ -247,7 +249,7 @@
     </header>
     <main class="article-main">
         <a href="../index.html" class="back-link">← Back to Home</a>
-        <img loading="lazy" decoding="async" src="../assets/blog-default.png" alt="AI Future" class="hero-img">
+        <img fetchpriority="high" decoding="async" src="../assets/blog-default.png" alt="AI Future" class="hero-img" width="800" height="450">
         <div class="meta">Published on April 5, 2024 | Category: Tech</div>
         <h1>The Future of AI in Everyday Life</h1>
         <div class="content">
@@ -271,7 +273,7 @@
         </div>
         <div class="articles-grid grid-5-cols">
             <article class="article-card" onclick="window.location.href='future-of-ai.html'">
-                <img src="../assets/blog-default.png" alt="Future of AI" class="article-image" loading="lazy">
+                <img src="../assets/blog-default.png" alt="Future of AI" class="article-image" loading="lazy" width="300" height="170">
                 <div class="article-content">
                     <h2 class="article-title">Future of AI in Everyday Life</h2>
                     <p class="article-excerpt">Artificial Intelligence is no longer just a buzzword; it's a
@@ -280,7 +282,7 @@
                 </div>
             </article>
             <article class="article-card" onclick="window.location.href='sustainable-living.html'">
-                <img src="../assets/blog-default.png" alt="Sustainable Living" class="article-image" loading="lazy">
+                <img src="../assets/blog-default.png" alt="Sustainable Living" class="article-image" loading="lazy" width="300" height="170">
                 <div class="article-content">
                     <h2 class="article-title">Sustainable Living in 2024</h2>
                     <p class="article-excerpt">Living sustainably doesn't always mean massive changes to your lifestyle.
@@ -289,7 +291,7 @@
                 </div>
             </article>
             <article class="article-card" onclick="window.location.href='personal-finance-tips.html'">
-                <img src="../assets/blog-default.png" alt="Finance Tips" class="article-image" loading="lazy">
+                <img src="../assets/blog-default.png" alt="Finance Tips" class="article-image" loading="lazy" width="300" height="170">
                 <div class="article-content">
                     <h2 class="article-title">Personal Finance Tips for 2024</h2>
                     <p class="article-excerpt">Financial freedom begins with smart choices and disciplined habits...</p>
@@ -297,7 +299,7 @@
                 </div>
             </article>
             <article class="article-card" onclick="window.location.href='mental-health-awareness.html'">
-                <img src="../assets/blog-default.png" alt="Mental Health" class="article-image" loading="lazy">
+                <img src="../assets/blog-default.png" alt="Mental Health" class="article-image" loading="lazy" width="300" height="170">
                 <div class="article-content">
                     <h2 class="article-title">Mental Health Awareness</h2>
                     <p class="article-excerpt">In a world of constant connectivity, prioritizing our emotional
@@ -306,7 +308,7 @@
                 </div>
             </article>
             <article class="article-card" onclick="window.location.href='travel-hacks-2024.html'">
-                <img src="../assets/blog-default.png" alt="Travel Hacks" class="article-image" loading="lazy">
+                <img src="../assets/blog-default.png" alt="Travel Hacks" class="article-image" loading="lazy" width="300" height="170">
                 <div class="article-content">
                     <h2 class="article-title">Top Travel Hacks for 2024</h2>
                     <p class="article-excerpt">Ready for your next adventure? Traveling more affordably and efficiently
@@ -395,9 +397,9 @@
         </div>
     </div>
 
-    <script src="../config.js"></script>
-    <script src="../translator.js"></script>
-    <script src="../script.js"></script>
+    <script src="../config.js" defer></script>
+    <script src="../translator.js" defer></script>
+    <script src="../script.js" defer></script>
     <script>
         // Backend API configuration
         const API_BASE_URL = CONFIG.API_BASE_URL;
