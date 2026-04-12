@@ -2,11 +2,11 @@ const ARTICLE_DATA = [
   // TinyBigTalks (11 Real Articles)
   {
     id: 'tbt-1',
-    title: 'Future of AI in Everyday Life',
-    excerpt: 'Artificial Intelligence is no longer just a buzzword; it\'s a transformative force reshaping how we live...',
+    title: 'Iran vs USA and Israel – Best Strategic Analysis Guide with Examples (2026)',
+    excerpt: "Learn how Iran's military strategy, asymmetric warfare, proxy networks, and missile power could challenge USA and Israel..",
     image: 'assets/blog-default.png',
     category: 'TinyBigTalks',
-    url: 'articles/future-of-ai.html'
+    url: 'articles/Iran_vs_USA_and_Israel_Best_Strategic_Analysis_Guide.html'
   },
   {
     id: 'tbt-2',
