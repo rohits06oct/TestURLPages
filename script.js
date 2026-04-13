@@ -83,8 +83,6 @@ const ARTICLE_DATA = [
   }))
 ];
 
-
-
 function renderArticles(articles, containerId = 'search-grid') {
   const container = document.getElementById(containerId);
   if (!container) return;
@@ -211,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
       renderHomeSections();
     }
   }
-
 
   // Web Search
   const webSearchInput = document.getElementById('web-search');
