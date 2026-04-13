@@ -10,11 +10,11 @@ const ARTICLE_DATA = [
   },
   {
     id: 'tbt-2',
-    title: 'Iran vs USA and Israel – Best Strategic Analysis Guide with Examples (2026)',
-    excerpt: "Learn how Iran's military strategy, asymmetric warfare, proxy networks, and missile power could challenge USA and Israel..",
-    image: 'assets/blog-default.png',
+    title: 'Rory McIlroy Wins Masters 2026 Results who win the Masters',
+    excerpt: "Rory McIlroy captures his career Grand Slam winning the 2026 Masters. He beat Scheffler by one shot to claim the $4.5M prize at Augusta National...",
+    image: 'articles/image/rory_mcilroy_masters_2026_win.webp',
     category: 'TinyBigTalks',
-    url: 'articles/Iran_vs_USA_and_Israel_Best_Strategic_Analysis_Guide.html'
+    url: 'articles/rory-mcilroy-masters-2026-winner.html'
   },
   {
     id: 'tbt-2',
