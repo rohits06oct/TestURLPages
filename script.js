@@ -1,7 +1,7 @@
 const ARTICLE_DATA = [
   // TinyBigTalks (11 Real Articles)
   {
-    id: 'tbt-1',
+    id: 'tbt-2',
     title: 'Euphoria Season 3 Premiere: Date & How to Watch',
     excerpt: "Get the 'Euphoria' Season 3 premiere details, release date, and full episode schedule. Learn how to watch Zendaya return to HBO Max in April 2026....",
     image: 'articles/image/euphoria-season-3.webp',
@@ -9,21 +9,21 @@ const ARTICLE_DATA = [
     url: 'articles/euphoria-season-3-premiere-how-to-watch.html'
   },
   {
-    id: 'tbt-2',
+    id: 'tbt-1',
     title: 'Rory McIlroy Wins Masters 2026 Results who win the Masters',
     excerpt: "Rory McIlroy captures his career Grand Slam winning the 2026 Masters. He beat Scheffler by one shot to claim the $4.5M prize at Augusta National...",
     image: 'articles/image/rory_mcilroy_masters_2026_win.webp',
     category: 'TinyBigTalks',
     url: 'articles/rory-mcilroy-masters-2026-winner.html'
   },
-  {
-    id: 'tbt-2',
-    title: 'Sustainable Living in 2024',
-    excerpt: 'Living sustainably doesn\'t always mean massive changes to your lifestyle. Often, it\'s the small choices...',
-    image: 'assets/blog-default.png',
-    category: 'TinyBigTalks',
-    url: 'articles/sustainable-living.html'
-  },
+  // {
+  //   id: 'tbt-2',
+  //   title: 'Sustainable Living in 2024',
+  //   excerpt: 'Living sustainably doesn\'t always mean massive changes to your lifestyle. Often, it\'s the small choices...',
+  //   image: 'assets/blog-default.png',
+  //   category: 'TinyBigTalks',
+  //   url: 'articles/sustainable-living.html'
+  // },
   // Other categories (restoring previous counts)
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `fin-${i + 1}`,
