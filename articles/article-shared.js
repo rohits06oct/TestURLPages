@@ -3,12 +3,71 @@
  * Handles Comments, Footer, and Search Overlay for all articles.
  */
 
-(function() {
+(function () {
     // 1. Initialize HTML Components
     const sharedComponents = `
     <section id="comments-section" class="container">
         <div class="category-header">
             <div class="category-label">Discussion</div>
+            <div
+                style="text-align: center; margin: 20px auto; width: 100%; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <div>
+                    <!-- Start Banner Addsterra TAG -->
+                    <script>
+                        atOptions = {
+                        'key' : '6690eff882cbaf9cd9954f2407e29807',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                        };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/6690eff882cbaf9cd9954f2407e29807/invoke.js"></script>
+                    <!-- End Banner Addsterra TAG -->
+                </div>
+                <div>
+                    <!-- Start Banner Addsterra TAG -->
+                    <script>
+                    atOptions = {
+                        'key' : '6690eff882cbaf9cd9954f2407e29807',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/6690eff882cbaf9cd9954f2407e29807/invoke.js"></script>
+                    <!-- End Banner Addsterra TAG -->
+                </div>
+                <div>
+                    <!-- Start Banner Addsterra TAG -->
+                    <script>
+                    atOptions = {
+                        'key' : '6690eff882cbaf9cd9954f2407e29807',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/6690eff882cbaf9cd9954f2407e29807/invoke.js"></script>
+                    <!-- End Banner Addsterra TAG -->
+                </div>
+                <div>
+                    <!-- Start Banner Addsterra TAG -->
+                    <script>
+                    atOptions = {
+                        'key' : '6690eff882cbaf9cd9954f2407e29807',
+                        'format' : 'iframe',
+                        'height' : 250,
+                        'width' : 300,
+                        'params' : {}
+                    };
+                    </script>
+                    <script src="https://www.highperformanceformat.com/6690eff882cbaf9cd9954f2407e29807/invoke.js"></script>
+                    <!-- End Banner Addsterra TAG -->
+                </div>
+            </div>
             <div class="category-line"></div>
         </div>
         <div class="comments-section">
@@ -79,7 +138,7 @@
 
     // 2. Logic & Functionality
     const API_BASE_URL = typeof CONFIG !== 'undefined' ? CONFIG.API_BASE_URL : '';
-    
+
     // Cookie Helpers
     function setCookie(name, value, days) {
         const date = new Date();
@@ -242,7 +301,7 @@
 
         if (form && contentInput && submitBtn) {
             contentInput.addEventListener('input', (e) => validateComment(e.target.value));
-            
+
             form.addEventListener('submit', async (e) => {
                 e.preventDefault();
                 if (!validateComment(contentInput.value)) return;
@@ -263,7 +322,7 @@
                         const data = JSON.parse(error.message);
                         if (data.remainingSeconds) msg = `Too many comments. Try again after ${formatTime(data.remainingSeconds)}.`;
                         else if (data.error) msg = data.error;
-                    } catch(e) {}
+                    } catch (e) { }
                     alert(msg);
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Post Comment';
