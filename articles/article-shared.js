@@ -9,8 +9,7 @@
     <section id="comments-section" class="container">
         <div class="category-header">
             <div class="category-label">Discussion</div>
-            <div
-                style="text-align: center; margin: 20px auto; width: 100%; display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <div class="ads-wrapper">
                 <div>
                     <!-- Start Banner Addsterra TAG -->
                     <script>
@@ -134,6 +133,24 @@
     const container = document.getElementById('shared-components-container');
     if (container) {
         container.innerHTML = sharedComponents;
+        
+        // Browsers don't execute scripts in innerHTML by default.
+        // We need to manually re-create and append them.
+        const scripts = container.querySelectorAll('script');
+        scripts.forEach(oldScript => {
+            const newScript = document.createElement('script');
+            Array.from(oldScript.attributes).forEach(attr => {
+                newScript.setAttribute(attr.name, attr.value);
+            });
+            if (oldScript.src) {
+                // For external scripts
+                newScript.src = oldScript.src;
+            } else if (oldScript.innerHTML) {
+                // For inline scripts
+                newScript.innerHTML = oldScript.innerHTML;
+            }
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+        });
     }
 
     // 2. Logic & Functionality
