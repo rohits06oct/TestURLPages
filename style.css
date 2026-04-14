@@ -193,7 +193,7 @@ header {
 
 .social-links-container a:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .social-links-container svg {
@@ -703,8 +703,7 @@ footer {
 
   /* Hero Image Mobile Adjustment */
   .hero-img {
-    aspect-ratio: 4 / 3; /* More vertical aspect ratio for mobile */
-    min-height: 250px;
+    min-height: 0px;
   }
 }
 
