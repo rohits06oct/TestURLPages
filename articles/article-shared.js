@@ -9,7 +9,10 @@
     <section id="comments-section" class="container">
         <div class="category-header">
             <div class="category-label">Discussion</div>
-            <div class="ads-wrapper">
+            <div class="category-line"></div>
+        </div>
+
+        <div class="ads-wrapper">
                 <div>
                     <!-- Start Banner Addsterra TAG -->
                     <script>
@@ -67,8 +70,7 @@
                     <!-- End Banner Addsterra TAG -->
                 </div>
             </div>
-            <div class="category-line"></div>
-        </div>
+
         <div class="comments-section">
             <h3>Leave your thoughts</h3>
             <form id="comment-form" class="comment-form">
@@ -133,7 +135,7 @@
     const container = document.getElementById('shared-components-container');
     if (container) {
         container.innerHTML = sharedComponents;
-        
+
         // Browsers don't execute scripts in innerHTML by default.
         // We need to manually re-create and append them.
         const scripts = container.querySelectorAll('script');
