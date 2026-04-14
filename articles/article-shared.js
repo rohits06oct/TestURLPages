@@ -139,20 +139,36 @@
         // Browsers don't execute scripts in innerHTML by default.
         // We need to manually re-create and append them.
         const scripts = container.querySelectorAll('script');
-        scripts.forEach(oldScript => {
-            const newScript = document.createElement('script');
-            Array.from(oldScript.attributes).forEach(attr => {
-                newScript.setAttribute(attr.name, attr.value);
-            });
-            if (oldScript.src) {
-                // For external scripts
-                newScript.src = oldScript.src;
-            } else if (oldScript.innerHTML) {
-                // For inline scripts
-                newScript.innerHTML = oldScript.innerHTML;
-            }
-            oldScript.parentNode.replaceChild(newScript, oldScript);
+        executeScriptsSequentially(Array.from(scripts));
+    }
+
+    function executeScriptsSequentially(scripts, index = 0) {
+        if (index >= scripts.length) return;
+
+        const oldScript = scripts[index];
+        const newScript = document.createElement('script');
+
+        Array.from(oldScript.attributes).forEach(attr => {
+            newScript.setAttribute(attr.name, attr.value);
         });
+
+        const next = () => executeScriptsSequentially(scripts, index + 1);
+
+        if (oldScript.src) {
+            newScript.src = oldScript.src;
+            newScript.onload = next;
+            newScript.onerror = () => {
+                console.warn(`Failed to load ad script: ${oldScript.src}`);
+                next();
+            };
+        } else {
+            newScript.textContent = oldScript.textContent;
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+            next();
+            return;
+        }
+
+        oldScript.parentNode.replaceChild(newScript, oldScript);
     }
 
     // 2. Logic & Functionality
