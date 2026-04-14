@@ -442,11 +442,13 @@ nav.desktop-nav ul li a.active::after {
 
 .hero-img {
   width: 100%;
-  aspect-ratio: 800 / 450;
+  height: auto;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: block;
 }
 
 .article-content {
@@ -697,6 +699,12 @@ footer {
 
   .article-card-vertical .article-content {
     padding: 20px !important;
+  }
+
+  /* Hero Image Mobile Adjustment */
+  .hero-img {
+    aspect-ratio: 4 / 3; /* More vertical aspect ratio for mobile */
+    min-height: 250px;
   }
 }
 
