@@ -409,7 +409,6 @@ nav.desktop-nav ul li a.active::after {
 .article-card-vertical .article-image {
   width: 300px;
   height: 200px;
-  object-fit: cover;
 }
 
 .article-card-vertical .article-content {
@@ -437,14 +436,12 @@ nav.desktop-nav ul li a.active::after {
 .article-image {
   width: 100%;
   aspect-ratio: 16/9;
-  object-fit: cover;
 }
 
 .hero-img {
   width: 100%;
   height: auto;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
   border-radius: 12px;
   margin-bottom: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
