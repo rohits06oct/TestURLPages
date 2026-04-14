@@ -126,20 +126,3 @@
     color: #888;
     padding: 20px;
 }
-
-/* Ad Container Styles */
-.ads-wrapper {
-    text-align: center;
-    margin: 20px auto;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: nowrap; /* Default: Single row on desktop */
-}
-
-@media (max-width: 768px) {
-    .ads-wrapper {
-        flex-wrap: wrap; /* Wraps on mobile */
-    }
-}
