@@ -16,14 +16,14 @@ const ARTICLE_DATA = [
     category: 'TinyBigTalks',
     url: 'articles/rory-mcilroy-masters-2026-winner.html'
   },
-  // {
-  //   id: 'tbt-2',
-  //   title: 'Sustainable Living in 2024',
-  //   excerpt: 'Living sustainably doesn\'t always mean massive changes to your lifestyle. Often, it\'s the small choices...',
-  //   image: 'assets/blog-default.png',
-  //   category: 'TinyBigTalks',
-  //   url: 'articles/sustainable-living.html'
-  // },
+  {
+    id: 'tbt-3',
+    title: 'Barcelona vs Atletico Madrid Champions League 2026',
+    excerpt: 'Barcelona put up a stunning first-half comeback but were ultimately eliminated by Atletico Madrid 3-2 on aggregate in the UEFA Champions League 2026 quarter-finals. Full report and player ratings inside..',
+    image: 'https://www.tinybigtalks.online/articles/image/barcelona_atletico_ucl_2026.webp',
+    category: 'TinyBigTalks',
+    url: 'https://www.tinybigtalks.online/articles/barcelona-atletico-madrid-ucl-quarter-final-2026.html'
+  },
   // Other categories (restoring previous counts)
   ...Array.from({ length: 5 }, (_, i) => ({
     id: `fin-${i + 1}`,

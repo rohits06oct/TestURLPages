@@ -1035,3 +1035,34 @@ textarea.form-input {
     /* Wraps on mobile */
   }
 }
+
+.tags {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tags li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.tags a {
+  text-decoration: none;
+  color: #1a73e8;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .tags {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tags li {
+    display: inline;
+  }
+}
