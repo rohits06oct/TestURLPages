@@ -9,6 +9,14 @@ const ARTICLE_DATA = [
     url: 'articles/peter-magyar-hungarian-election-2026.html'
   },
   {
+    id: 'tbt-6',
+    title: 'Viva Energy Geelong Oil Refinery Fire and Its Impact on Petrol Prices',
+    excerpt: "A massive fire at the Viva Energy oil refinery in Geelong was extinguished after 12 hours. Discover the cause and the potential impact on Australian petrol prices amid a global fuel crunch....",
+    image: 'https://www.tinybigtalks.online/articles/image/viva_energy_geelong_fire.webp',
+    category: 'TinyBigTalks',
+    url: 'https://www.tinybigtalks.online/articles/viva-energy-geelong-oil-refinery-fire.html'
+  },
+  {
     id: 'tbt-5',
     title: 'Polish Tax Office Enters Smartphones: The e-Urząd Skarbowy Revolution',
     excerpt: "Discover the features of Poland's e-Urząd Skarbowy mobile app. With the tax office now on their smartphones, Poles can file taxes, receive letters, and pay securely via BLIK 24/7...",

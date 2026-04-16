@@ -1,8 +1,8 @@
 import os
 from PIL import Image, ImageDraw, ImageFont
 
-img_path = r'C:\Users\rohit\.gemini\antigravity\brain\fdb3f11b-0fd2-448a-a820-b03722f40a3b\polish_tax_office_app_1776323536528.png'
-out_path = r'c:\Users\rohit\.gemini\antigravity\playground\tensor-granule\TestURLPages\articles\image\polish_tax_office_app.webp'
+img_path = r'C:\Users\rohit\.gemini\antigravity\brain\fdb3f11b-0fd2-448a-a820-b03722f40a3b\geelong_refinery_fire_1776324478246.png'
+out_path = r'c:\Users\rohit\.gemini\antigravity\playground\tensor-granule\TestURLPages\articles\image\viva_energy_geelong_fire.webp'
 
 os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
@@ -29,7 +29,7 @@ draw.rectangle((brand_x-5, brand_y-5, brand_x+brand_w+5, brand_y+brand_h+5), fil
 draw.text((brand_x, brand_y), brand_text, fill="white", font=brand_font)
 
 # Main Title Text
-headline_text = "Polish Tax Office in Your Smartphone:\ne-Urząd Skarbowy Revolution"
+headline_text = "Viva Energy Geelong Refinery Fire:\nImpact on Petrol Prices"
 try:
     headline_font = ImageFont.truetype("arialbd.ttf", 36)
 except IOError:
