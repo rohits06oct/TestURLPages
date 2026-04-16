@@ -4,7 +4,7 @@ const ARTICLE_DATA = [
     id: 'tbt-4',
     title: 'Peter Magyar Wins Hungarian Parliamentary Election 2026 Results',
     excerpt: "Peter Magyar and the Tisza Party achieve a landslide victory in the 2026 Hungarian parliamentary election, ending Viktor Orbán's 16-year rule with a record voter turnout..",
-    image: 'articles/image/euphoria-season-3.webp',
+    image: 'articles/image/peter_magyar_election_2026_win.webp',
     category: 'TinyBigTalks',
     url: 'articles/peter-magyar-hungarian-election-2026.html'
   },
