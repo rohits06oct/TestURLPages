@@ -9,6 +9,14 @@ const ARTICLE_DATA = [
     url: 'articles/peter-magyar-hungarian-election-2026.html'
   },
   {
+    id: 'tbt-5',
+    title: 'Polish Tax Office Enters Smartphones: The e-Urząd Skarbowy Revolution',
+    excerpt: "Discover the features of Poland's e-Urząd Skarbowy mobile app. With the tax office now on their smartphones, Poles can file taxes, receive letters, and pay securely via BLIK 24/7...",
+    image: 'https://www.tinybigtalks.online/articles/image/polish_tax_office_app.webp',
+    category: 'TinyBigTalks',
+    url: 'https://www.tinybigtalks.online/articles/e-urzad-skarbowy-app-poland.html'
+  },
+  {
     id: 'tbt-2',
     title: 'Euphoria Season 3 Premiere: Date & How to Watch',
     excerpt: "Get the 'Euphoria' Season 3 premiere details, release date, and full episode schedule. Learn how to watch Zendaya return to HBO Max in April 2026....",

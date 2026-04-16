@@ -1,21 +1,18 @@
 import os
 from PIL import Image, ImageDraw, ImageFont
 
-img_path = r'C:\Users\rohit\.gemini\antigravity\brain\fdb3f11b-0fd2-448a-a820-b03722f40a3b\peter_magyar_election_win_1776319699962.png'
-out_path = r'c:\Users\rohit\.gemini\antigravity\playground\tensor-granule\TestURLPages\articles\image\peter_magyar_election_2026_win.webp'
+img_path = r'C:\Users\rohit\.gemini\antigravity\brain\fdb3f11b-0fd2-448a-a820-b03722f40a3b\polish_tax_office_app_1776323536528.png'
+out_path = r'c:\Users\rohit\.gemini\antigravity\playground\tensor-granule\TestURLPages\articles\image\polish_tax_office_app.webp'
 
-# Ensure directory exists
 os.makedirs(os.path.dirname(out_path), exist_ok=True)
 
 img = Image.open(img_path)
 img = img.resize((800, 450), Image.Resampling.LANCZOS)
-
-# Convert to RGBA to properly draw semi-transparent rectangles
 img = img.convert("RGBA")
 overlay = Image.new("RGBA", img.size, (0, 0, 0, 0))
 draw = ImageDraw.Draw(overlay)
 
-# 1. TinyBigTalks text at bottom right
+# TinyBigTalks text at bottom right
 brand_text = "TinyBigTalks.online"
 try:
     brand_font = ImageFont.truetype("arial.ttf", 20)
@@ -25,20 +22,19 @@ except IOError:
 bbox = draw.textbbox((0, 0), brand_text, font=brand_font)
 brand_w = bbox[2] - bbox[0]
 brand_h = bbox[3] - bbox[1]
-
 brand_x = img.width - brand_w - 15
 brand_y = img.height - brand_h - 15
 
 draw.rectangle((brand_x-5, brand_y-5, brand_x+brand_w+5, brand_y+brand_h+5), fill=(0, 0, 0, 180))
 draw.text((brand_x, brand_y), brand_text, fill="white", font=brand_font)
 
-# 2. Main Title Text
-headline_text = "Peter Magyar Wins Hungarian\nParliamentary Election 2026"
+# Main Title Text
+headline_text = "Polish Tax Office in Your Smartphone:\ne-Urząd Skarbowy Revolution"
 try:
-    headline_font = ImageFont.truetype("arialbd.ttf", 40) # bold Arial
+    headline_font = ImageFont.truetype("arialbd.ttf", 36)
 except IOError:
     try:
-        headline_font = ImageFont.truetype("arial.ttf", 36)
+        headline_font = ImageFont.truetype("arial.ttf", 32)
     except IOError:
         headline_font = ImageFont.load_default()
 
@@ -48,18 +44,13 @@ headline_h = headline_bbox[3] - headline_bbox[1]
 
 title_x = 20
 title_y = 20
-
-# Draw dark background for readability
 draw.rectangle((title_x-10, title_y-10, title_x+headline_w+10, title_y+headline_h+10), fill=(0, 0, 0, 200))
 draw.text((title_x, title_y), headline_text, fill=(255, 255, 255), font=headline_font)
 
-# Combine overlay with image
 img = Image.alpha_composite(img, overlay).convert("RGB")
 
-# Save as WEBP
 quality = 85
 img.save(out_path, format="WEBP", quality=quality)
-
 while os.path.getsize(out_path) > 200 * 1024 and quality > 30:
     quality -= 10
     img.save(out_path, format="WEBP", quality=quality)
