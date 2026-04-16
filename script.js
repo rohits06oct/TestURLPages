@@ -1,6 +1,14 @@
 const ARTICLE_DATA = [
   // TinyBigTalks (11 Real Articles)
   {
+    id: 'tbt-4',
+    title: 'Peter Magyar Wins Hungarian Parliamentary Election 2026 Results',
+    excerpt: "Peter Magyar and the Tisza Party achieve a landslide victory in the 2026 Hungarian parliamentary election, ending Viktor Orbán's 16-year rule with a record voter turnout..",
+    image: 'articles/image/euphoria-season-3.webp',
+    category: 'TinyBigTalks',
+    url: 'articles/peter-magyar-hungarian-election-2026.html'
+  },
+  {
     id: 'tbt-2',
     title: 'Euphoria Season 3 Premiere: Date & How to Watch',
     excerpt: "Get the 'Euphoria' Season 3 premiere details, release date, and full episode schedule. Learn how to watch Zendaya return to HBO Max in April 2026....",
